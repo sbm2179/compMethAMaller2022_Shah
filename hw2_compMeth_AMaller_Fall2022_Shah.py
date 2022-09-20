@@ -21,7 +21,7 @@ def E(b):
     return(del_x*s)
 
 #calculating and printing E(x) for x from 0 to 3 with step 0.1
-x=np.linspace(0,3,int(3-0/0.1))
+x=np.linspace(0,3,int((3-0)/0.1))
 
 for i in x:
     print(i, E(i))

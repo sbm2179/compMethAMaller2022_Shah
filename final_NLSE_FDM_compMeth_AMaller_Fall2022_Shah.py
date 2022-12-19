@@ -58,7 +58,7 @@ for i in range(0,Nx):
     plt.legend()
 plt.xlabel("Time in seconds")
 plt.ylabel("Amplitude (Arb. Unit)")
-plt.suptitle("Amplitude time profile at difference distance inside Silica")
+plt.suptitle("Amplitude time profile at different distance inside Silica")
 plt.show() 
 
 #Results in frequency
@@ -70,6 +70,6 @@ plt.xlim(0,0.15)
 plt.ylim(0)
 plt.xlabel("Frequency (cycle/seconds)")
 plt.ylabel("Intensity (Arb. Unit)")
-plt.suptitle("Amplitude frequency profile at difference distance inside Silica")
+plt.suptitle("Amplitude frequency profile at different distance inside Silica")
 plt.legend()
 plt.show()

@@ -47,14 +47,29 @@ for i in range(0,Nx):
     plt.xlim(0,0.2e-10)
     plt.xlabel("Time in seconds")
     plt.ylabel("Amplitude (Arb. Unit)")
+    plt.show()
     plt.pause(0.001)
     
+
+#Results in time
 for i in range(0,Nx):
     plt.plot(t,np.absolute(A_dfm[i]),label=str((1e-7)*i)+" meter")
     plt.xlim(0,0.2e-10)
     plt.legend()
 plt.xlabel("Time in seconds")
 plt.ylabel("Amplitude (Arb. Unit)")
+plt.suptitle("Amplitude time profile at difference distance inside Silica")
 plt.show() 
 
-
+#Results in frequency
+for i in range(0,Nx):
+    f=np.fft.fft(A_dfm[i])
+    freq = np.fft.fftfreq(t.shape[-1])
+    plt.plot(freq,f.real,label=str((1e-7)*i)+" meter")
+plt.xlim(0,0.15)
+plt.ylim(0)
+plt.xlabel("Frequency (cycle/seconds)")
+plt.ylabel("Intensity (Arb. Unit)")
+plt.suptitle("Amplitude frequency profile at difference distance inside Silica")
+plt.legend()
+plt.show()
